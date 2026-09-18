@@ -6,8 +6,7 @@ type NavHref = '#home' | '#audio' | '#video' | '#consulting' | '#contact';
 interface NavItem {
   id: NavId;
   label: NavLabel;
-  href: string;
-  isActive?: NavHref;
+  href: NavHref;
 }
 
 interface BrandInfo {
