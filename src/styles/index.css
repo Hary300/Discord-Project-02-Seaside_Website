@@ -83,6 +83,12 @@
   --color-gray: #333333;
   --color-light-orange: #f68d30;
   --color-dark-orange: #e5755a;
+
+  --background-image-gradient-primary: linear-gradient(
+    90deg,
+    #f68d30 0%,
+    #e5755a 100%
+  );
 }
 
 :root {

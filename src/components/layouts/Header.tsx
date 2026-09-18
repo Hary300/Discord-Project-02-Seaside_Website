@@ -5,15 +5,15 @@ const Header = () => {
   const logo = headerData.logo;
   const navLinks = headerData.navigation;
   return (
-    <header className='flex justify-between items-center max-w-360 mx-auto px-4 sm:px-10 lg:px-15 xl:px-30 h-20 sm:h-30 md:h-37.5 bg-linear-to-r from-light-orange to-dark-orange'>
-      <div className='flex flex-col items-center gap-1'>
-        <span className='text-xl sm:text-2xl lg:text-3xl font-copperplate font-light'>
-          <span className='text-[25px] sm:text-[30px] lg:text-[36px]'>
+    <header className='flex justify-between items-center max-w-360 mx-auto px-4 sm:px-10 lg:px-15 xl:px-30 h-20 sm:h-30 md:h-37.5 bg-gradient-primary'>
+      <div className='flex flex-col items-center gap-0.5 sm:gap-1'>
+        <span className='text-lg sm:text-2xl lg:text-3xl font-copperplate font-light'>
+          <span className='text-[20px] sm:text-[30px] lg:text-[36px]'>
             {logo.name[0]}
           </span>
           {logo.name.slice(1)}
         </span>
-        <span className='text-sm sm:text-lg lg:text-xl tracking-widest'>
+        <span className='text-xs sm:text-lg lg:text-xl tracking-widest'>
           {logo.subtitle}
         </span>
       </div>

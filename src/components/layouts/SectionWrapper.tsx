@@ -1,7 +1,13 @@
 import { cn } from 'cn';
 import { type ReactNode } from 'react';
 
-type SectionId = 'home' | 'audio' | 'video' | 'consulting' | 'contact';
+type SectionId =
+  | 'home'
+  | 'audio'
+  | 'video'
+  | 'consulting'
+  | 'contact'
+  | (string & {});
 
 interface SectionWrapperProps {
   sectionId: SectionId;
@@ -16,7 +22,10 @@ const SectionWrapper = ({
   return (
     <section
       id={sectionId}
-      className={cn('px-4 sm:px-10 lg:px-15 xl:px-30', className)}
+      className={cn(
+        'px-4 sm:px-10 lg:px-15 xl:px-30 py-4 sm:py-10 ',
+        className
+      )}
     >
       {children}
     </section>
