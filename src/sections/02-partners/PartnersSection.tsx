@@ -6,7 +6,7 @@ const PartnersSection = () => {
   return (
     <SectionWrapper
       sectionId='partner'
-      className='relative px-0 sm:px-0 lg:px-0 xl:px-0 sm:py-4'
+      className='relative px-0 sm:px-0 lg:px-0 xl:px-0 py-6'
     >
       <PartnersMarquee />
       <BlackGradient gradientDirection='toTop' />

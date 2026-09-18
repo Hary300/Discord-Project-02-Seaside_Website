@@ -22,10 +22,7 @@ const SectionWrapper = ({
   return (
     <section
       id={sectionId}
-      className={cn(
-        'px-4 sm:px-10 lg:px-15 xl:px-30 py-4 sm:py-10 ',
-        className
-      )}
+      className={cn('px-4 sm:px-10 lg:px-15 xl:px-30 py-10', className)}
     >
       {children}
     </section>
