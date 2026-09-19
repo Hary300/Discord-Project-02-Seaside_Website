@@ -1,8 +1,8 @@
-import { ComponentPropsWithoutRef } from "react";
- 
-import { cn } from "@/lib/utils";
- 
-interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
+import type { ComponentPropsWithoutRef } from 'react';
+
+import { cn } from '@/lib/utils';
+
+interface MarqueeProps extends ComponentPropsWithoutRef<'div'> {
   className?: string;
   /**
    * Whether to reverse the animation direction
@@ -29,7 +29,7 @@ interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
    */
   repeat?: number;
 }
- 
+
 export function Marquee({
   className,
   reverse = false,
@@ -92,13 +92,13 @@ export function Marquee({
       <div
         {...props}
         className={cn(
-          "group flex gap-(--gap) overflow-hidden p-2 [--duration:40s] [--gap:1rem]",
+          'group flex gap-(--gap) overflow-hidden p-2 [--duration:40s] [--gap:1rem]',
           {
-            "flex-row": !vertical,
-            "flex-col": vertical,
-            "pause-on-hover": pauseOnHover,
+            'flex-row': !vertical,
+            'flex-col': vertical,
+            'pause-on-hover': pauseOnHover,
           },
-          className,
+          className
         )}
       >
         {Array(repeat)
@@ -106,10 +106,10 @@ export function Marquee({
           .map((_, i) => (
             <div
               key={i}
-              className={cn("flex shrink-0 justify-around gap-(--gap)", {
-                "animate-marquee flex-row": !vertical,
-                "animate-marquee-vertical flex-col": vertical,
-                "animate-reverse": reverse,
+              className={cn('flex shrink-0 justify-around gap-(--gap)', {
+                'animate-marquee flex-row': !vertical,
+                'animate-marquee-vertical flex-col': vertical,
+                'animate-reverse': reverse,
               })}
             >
               {children}
