@@ -1,13 +1,14 @@
-type FieldId = 'name' | 'email' | 'message';
-type FieldName = 'name' | 'email' | 'message';
-type FieldLabel = 'Name' | 'Email' | 'Message';
+export type FieldId = 'name' | 'email' | 'message';
+export type FieldName = 'name' | 'email' | 'message';
+export type FieldLabel = 'Name' | 'Email' | 'Message';
+export type FieldType = 'text' | 'email' | 'textarea';
 
 interface ContactFormField {
   id: FieldId;
   name: FieldName;
   label: FieldLabel;
   placeholder: string;
-  type: 'text' | 'email' | 'textarea';
+  type: FieldType;
 }
 
 interface ContactData {
