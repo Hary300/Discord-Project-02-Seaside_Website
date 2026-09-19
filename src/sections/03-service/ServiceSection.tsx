@@ -1,9 +1,10 @@
 import SectionWrapper from '@/components/layouts/SectionWrapper';
+import BlackGradient from '@/components/shared/BlackGradient';
 import { servicesData } from '@/data/03-servicesData';
 
 const ServiceSection = () => {
   return (
-    <SectionWrapper sectionId='consulting'>
+    <SectionWrapper sectionId='consulting' className='relative'>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:w-fit mx-auto lg:w-full'>
         {servicesData.map((item) => (
           <div
@@ -29,6 +30,7 @@ const ServiceSection = () => {
           </div>
         ))}
       </div>
+      <BlackGradient gradientDirection='toBottom' />
     </SectionWrapper>
   );
 };

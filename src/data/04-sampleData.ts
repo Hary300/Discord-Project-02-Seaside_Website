@@ -1,8 +1,6 @@
 interface VideoSample {
   id: string;
-  title: string;
-  thumbnail: string;
-  videoUrl: string;
+  videoId: string;
 }
 
 interface AudioVideoSamplesData {
@@ -23,15 +21,19 @@ export const samplesData: AudioVideoSamplesData = {
   videoSamples: [
     {
       id: 'video-1',
-      title: 'Live Concert Performance',
-      thumbnail: '/images/samples/video-thumb-1.jpg',
-      videoUrl: 'https://www.youtube.com/watch?example1',
+      videoId: 'iV5hMjq4P98',
     },
     {
       id: 'video-2',
-      title: 'Event Highlights',
-      thumbnail: '/images/samples/video-thumb-2.jpg',
-      videoUrl: 'https://www.youtube.com/watch?example2',
+      videoId: 'msClqkY-d5s',
+    },
+    {
+      id: 'video-3',
+      videoId: 'soS73IgwhxU',
+    },
+    {
+      id: 'video-4',
+      videoId: 'ZRZucFnCHDo',
     },
   ],
 };

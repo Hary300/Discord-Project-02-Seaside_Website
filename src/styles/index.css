@@ -89,6 +89,8 @@
     #f68d30 0%,
     #e5755a 100%
   );
+
+  --shadow-subtle: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 :root {

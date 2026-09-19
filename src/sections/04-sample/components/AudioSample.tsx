@@ -179,6 +179,7 @@ const AudioSample = () => {
         src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(
           activeTrack?.url ?? ''
         )}&auto_play=false`}
+        className='shadow-subtle'
       />
 
       <div className='flex flex-col gap-4'>
@@ -188,7 +189,7 @@ const AudioSample = () => {
           return (
             <div
               key={track.title}
-              className='grid grid-cols-[auto_auto_1fr] gap-4 p-4 shadow-[0_0_10px_rgba(0,0,0,0.2)] bg-[#F5F5F5] items-center hover:underline cursor-pointer active:translate-y-px'
+              className='grid grid-cols-[auto_auto_1fr] gap-4 p-4 shadow-subtle bg-[#F5F5F5] items-center hover:underline cursor-pointer active:translate-y-px'
               onClick={() => handleSelectTrack(track)}
             >
               <SoundCloudPlayIcon isPlaying={isThisTrackPlaying} />
