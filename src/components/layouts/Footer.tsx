@@ -11,7 +11,9 @@ const Footer = () => {
           const Icon = social.icon;
           return (
             <div key={social.platform}>
-              <Icon className='size-10' />
+              <a href={social.url} target='_blank' rel='noopener noreferrer'>
+                <Icon className='size-10' />
+              </a>
             </div>
           );
         })}
