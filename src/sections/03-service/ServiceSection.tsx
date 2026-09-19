@@ -4,7 +4,7 @@ import { servicesData } from '@/data/03-servicesData';
 const ServiceSection = () => {
   return (
     <SectionWrapper sectionId='consulting'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:w-fit mx-auto'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:w-fit mx-auto lg:w-full'>
         {servicesData.map((item) => (
           <div
             key={item.id}

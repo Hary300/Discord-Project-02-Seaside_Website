@@ -1,11 +1,7 @@
 // 1. Interfaces
 interface AudioTrack {
   id: string;
-  title: string;
-  subtitle?: string;
-  thumbnail: string;
-  duration?: string;
-  audioUrl?: string;
+  iframeSrc?: string;
 }
 
 interface VideoSample {
@@ -17,49 +13,46 @@ interface VideoSample {
 
 interface AudioVideoSamplesData {
   sectionTitle: string;
-  activeAudio: AudioTrack;
   audioPlaylist: AudioTrack[];
   videoSamples: VideoSample[];
 }
 
-// 2. Object Data
+export const trackUrls = [
+  'https://soundcloud.com/yoil-628717682/do-you-hear-me',
+  'https://soundcloud.com/sayit-2/proud-of-that',
+  'https://soundcloud.com/yoil-628717682/youre-still-mine-yoil',
+  'https://soundcloud.com/brett-daly-703325095/lose-you-again',
+  'https://soundcloud.com/user-705847697/theres-more-to-life',
+];
+
 export const samplesData: AudioVideoSamplesData = {
   sectionTitle: 'SEASIDE AUDIO + VIDEO SAMPLES',
-
-  activeAudio: {
-    id: 'active-1',
-    title: '417 Hz Audio: Seaside Howls',
-    subtitle: 'Concert Promo: Morgan Wallen',
-    thumbnail: '/images/samples/active-audio-thumb.jpg',
-    duration: '3:34',
-    audioUrl: '/audio/seaside-howls.mp3',
-  },
-
   audioPlaylist: [
     {
-      id: 'audio-1',
-      title: 'Seaside Sunday Happy Hour Live Audio (3.3.24)',
-      thumbnail: '/images/samples/playlist-1.jpg',
+      id: 'track-1',
+
+      iframeSrc:
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2392445976&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     },
     {
-      id: 'audio-2',
-      title: 'Seaside Saturday 2.24.24 Live Audio',
-      thumbnail: '/images/samples/playlist-2.jpg',
+      id: 'track-2',
+      iframeSrc:
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2320480850&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     },
     {
-      id: 'audio-3',
-      title: 'SEASIDE AUDIO VISION PLAYLIST ONE',
-      thumbnail: '/images/samples/playlist-3.jpg',
+      id: 'track-3',
+      iframeSrc:
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2301400784&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     },
     {
-      id: 'audio-4',
-      title: 'Michael Hughes - Seaside Audio Vision - 05 Hollywood Baby Chorus',
-      thumbnail: '/images/samples/playlist-4.jpg',
+      id: 'track-4',
+      iframeSrc:
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2176835787&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     },
     {
-      id: 'audio-5',
-      title: 'Seaside feat. Junglebox (official audio)',
-      thumbnail: '/images/samples/playlist-5.jpg',
+      id: 'track-5',
+      iframeSrc:
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2378583092&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
     },
   ],
 
