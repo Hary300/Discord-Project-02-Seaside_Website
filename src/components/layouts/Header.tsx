@@ -18,7 +18,6 @@ const Header = () => {
 
   const logo = headerData.logo;
   const navLinks = headerData.navigation;
-  console.log(isScroll);
   return (
     <header
       className={cn(
