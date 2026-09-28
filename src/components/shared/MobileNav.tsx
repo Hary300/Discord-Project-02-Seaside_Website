@@ -9,11 +9,11 @@ import { FiMenu } from 'react-icons/fi';
 import { headerData } from '@/data/headerData';
 import { cn } from 'cn';
 
-interface MobileNavProps {
-  isScroll: boolean;
-}
+// interface MobileNavProps {
+//   isScroll: boolean;
+// }
 
-const MobileNav = ({ isScroll }: MobileNavProps) => {
+const MobileNav = () => {
   const navLinks = headerData.navigation;
   return (
     <Sheet>
@@ -21,13 +21,13 @@ const MobileNav = ({ isScroll }: MobileNavProps) => {
         <Button variant='ghost' size='fit' className='md:hidden'>
           <FiMenu
             className={cn(
-              ' stroke-3 size-6',
-              isScroll ? 'text-dark-blue' : 'text-white'
+              ' stroke-3 size-6 text-white'
+              // isScroll ? 'text-dark-blue' : 'text-white'
             )}
           />
         </Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent onCloseAutoFocus={(event) => event.preventDefault()}>
         <ul className='flex flex-col gap-4 p-4'>
           {navLinks.map((link) => (
             <li key={link.id}>

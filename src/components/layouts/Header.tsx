@@ -1,28 +1,28 @@
 import { headerData } from '@/data/headerData';
 import MobileNav from '../shared/MobileNav';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { cn } from 'cn';
 
 const Header = () => {
-  const [isScroll, setIsScroll] = useState(false);
+  // const [isScroll, setIsScroll] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScroll(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScroll(window.scrollY > 10);
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   const logo = headerData.logo;
   const navLinks = headerData.navigation;
   return (
     <header
       className={cn(
-        'fixed flex justify-between items-center max-w-360 mx-auto px-4 sm:px-10 lg:px-15 xl:px-30 h-20 sm:h-30 md:h-37.5 z-50 w-full backdrop-blur-2xl',
-        isScroll ? 'backdrop-blur-2xl' : 'bg-gradient-primary'
+        'flex justify-between items-center max-w-360 mx-auto px-4 sm:px-10 lg:px-15 xl:px-30 h-20 sm:h-30 md:h-37.5 z-50 w-full backdrop-blur-2xl bg-gradient-primary'
+        // isScroll ? 'backdrop-blur-2xl' : 'bg-gradient-primary'
       )}
     >
       <div className='flex flex-col items-center gap-0.5 sm:gap-1'>
@@ -43,10 +43,10 @@ const Header = () => {
             <li
               key={link.id}
               className={cn(
-                ' border-transparent border-b ',
-                isScroll
-                  ? 'hover:border-dark-blue'
-                  : 'text-white hover:border-white'
+                ' border-transparent border-b text-white hover:border-white'
+                // isScroll
+                //   ? 'hover:border-dark-blue'
+                //   : 'text-white hover:border-white'
               )}
             >
               <a href={link.href} className=''>
@@ -55,7 +55,7 @@ const Header = () => {
             </li>
           ))}
         </ul>
-        <MobileNav isScroll={isScroll} />
+        <MobileNav />
       </nav>
     </header>
   );
