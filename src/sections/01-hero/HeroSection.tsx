@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <SectionWrapper
       sectionId='home'
-      className='relative py-4 sm:py-10 bg-gradient-primary'
+      className='relative pb-4 pt-20 sm:pt-35 bg-gradient-primary'
     >
       <h1 className='flex flex-col text-[clamp(1.125rem,-0.0536rem+5.8929vw,4.8125rem)] text-right font-copperplate'>
         {heroTitle.line1} <span>{heroTitle.line2}</span>
